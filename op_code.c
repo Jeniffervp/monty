@@ -25,7 +25,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 		fmonkey(new_node);
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = batm.data;
+	new_node->n = atoi(batm.data);
 	new_node->next = *stack;
 	new_node->prev = NULL;
 	temp = *stack;

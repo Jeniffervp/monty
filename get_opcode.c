@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * get_opcode - ahdashjdsahgjdas
- * @name: hbjdsjhadsjds
- * @stack: kasdjkabdkak
- * @line_number: ghvsdasdvd
+ * get_opcode - funtion to look for the code to be used.
+ * @name: option to find
+ * @stack: doubly linked list.
+ * @line_number: counter the line.
  *
- * Return: hjbdahbjdasbhjdas
+ * Return: EXIT_FAILURE if fail..
  */
 
 void get_opcode(stack_t **stack, unsigned int line_number, char *name)
@@ -27,6 +27,16 @@ void get_opcode(stack_t **stack, unsigned int line_number, char *name)
 	};
 	int i = 0;
 
+	while (ops[i].opcode)
+	{
+		if (strcmp(ops[i].opcode, name) == 0)
+		{
+			ops[i].f(stack, line_number);
+			break;
+		}
+		i++;
+	}
+
 	if (!ops[i].opcode)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n",
@@ -34,12 +44,5 @@ void get_opcode(stack_t **stack, unsigned int line_number, char *name)
 		fmonkey((*stack));
 		exit(EXIT_FAILURE);
 	}
-	while (ops[i].opcode)
-	{
-		if (strcmp(ops[i].opcode, name) == 0)
-		{
-			ops[i].f(stack, line_number);
-		}
-		i++;
-	}
+
 }

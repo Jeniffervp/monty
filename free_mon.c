@@ -2,7 +2,7 @@
 
 /**
  * fmonkey - function that free a list.
- * @stack: the list.
+ * @stack: doubly linked list.
  * Return: nothin.
  */
 

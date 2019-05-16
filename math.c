@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * op_add - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_add - function to add
+ * @stack: doubly linked list.
+ * @line_number: counter of the line.
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if fail.
  */
 void op_add(stack_t **stack, unsigned int line_number)
 {
@@ -21,11 +21,11 @@ void op_add(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_sub - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_sub - function to sub
+ * @stack: doubly linked list.
+ * @line_number: counter of the line.
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if fail.
  */
 void op_sub(stack_t **stack, unsigned int line_number)
 {
@@ -41,11 +41,11 @@ void op_sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_mul - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_mul - function to mul.
+ * @stack: doubly linked list.
+ * @line_number: counter of the line.
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if fail.
  */
 void op_mul(stack_t **stack, unsigned int line_number)
 {
@@ -61,11 +61,11 @@ void op_mul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_div - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_div - function to div
+ * @stack: doubly linked list.
+ * @line_number: counter of the line.
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if fail.
  */
 void op_div(stack_t **stack, unsigned int line_number)
 {
@@ -88,11 +88,11 @@ void op_div(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_mod - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_mod - function to mod.
+ * @stack: doubly linked list.
+ * @line_number: counter of the line.
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if fail.
  */
 void op_mod(stack_t **stack, unsigned int line_number)
 {

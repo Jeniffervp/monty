@@ -27,8 +27,17 @@ int main(int ac, char *av[])
 	}
 	while ((read = getline(&batm.buf, &len, batm.fil)) != EOF)
 	{
+<<<<<<< HEAD
 		line_number++;
 		split(batm.buf, &stack, line_number);
+=======
+		if (batm.buf[0] != '\0' && batm.buf[0] != '\n' &&
+		    batm.buf[0] != ' ' && batm.buf[0] != '\t')
+		{
+			line_number++;
+			split(batm.buf, &stack, line_number);
+		}
+>>>>>>> 017d9201b5c5820f489c79cf24a733358aad705f
 	}
 	fmonkey(stack);
 	exit(EXIT_SUCCESS);

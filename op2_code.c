@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * op_swap - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_swap - opcode swap swaps the top two elements of the stack
+ * @stack: doubly linked list that makes the stack
+ * @line_number: Counter of lines in the file
  *
- * Return: hgasgsahgsa
+ * Return: EXIT FAILURE if failed
  */
 void op_swap(stack_t **stack, unsigned int line_number)
 {
@@ -24,11 +24,11 @@ void op_swap(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_nop - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_nop - opcode add adds the top two elements of the stack
+ * @stack: doubly linked list that makes the stack
+ * @line_number: Counter of lines in the file
  *
- * Return: hgasgsahgsa
+ * Return: Nothing
  */
 void op_nop(stack_t **stack, unsigned int line_number)
 {

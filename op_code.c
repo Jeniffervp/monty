@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * op_push - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_push - opcode push pushes an element to the stack
+ * @stack: double linked list that makes the stack
+ * @line_number: counter of lines
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if failed
  */
 
 void op_push(stack_t **stack, unsigned int line_number)
@@ -19,7 +19,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 		fmonkey(new_node);
 		exit(EXIT_FAILURE);
 	}
-	if (!batm.data && batm.data != 0)
+	if (!batm.data)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		fmonkey(new_node);
@@ -35,11 +35,11 @@ void op_push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_pall - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_pall - opcode pall prints all the values on the stack
+ * @stack: double linked list that makes the stack
+ * @line_number: counter of lines
  *
- * Return: hgasgsahgsa
+ * Return: Nothing
  */
 void op_pall(stack_t **stack, unsigned int line_number)
 {
@@ -52,11 +52,11 @@ void op_pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_pop - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_pop - opcode pop removes the top element of the stack
+ * @stack: double linked list that makes the stack
+ * @line_number: counter of lines
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if failed
  */
 void op_pop(stack_t **stack, unsigned int line_number)
 {
@@ -75,11 +75,11 @@ void op_pop(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_pint - vdsbvdsvhds
- * @stack: jsadhdss
- * @line_number: hdashdhsad
+ * op_pint - opcode pint prints the value at the top of the stack
+ * @stack: double linked list that makes the stack
+ * @line_number: counter of lines
  *
- * Return: hgasgsahgsa
+ * Return: EXIT_FAILURE if failed
  */
 void op_pint(stack_t **stack, unsigned int line_number)
 {

@@ -46,13 +46,14 @@ typedef struct instruction_s
  */
 typedef struct monty_val
 {
-	int data;
+	char *data;
 	char *buf;
 	FILE *fil;
 } exp;
 
 extern exp batm;
 
+int _isdigit(int c);
 void split(char *, stack_t **, unsigned int);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);

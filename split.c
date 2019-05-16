@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * split - bsabjasba
- * @buf: jkasdbkjasdk
- * @stack: gsasdgsada
- * @line_number: bjhadsbdsb
+ * split - function that generates tokens
+ * @buf: buffer that keeps lines
+ * @stack: Doubly linked list that makes the stack
+ * @line_number: Counter of lines in the file
  *
- * Return: nkjsdabakdhashd
+ * Return: nothing
  */
 
 void split(char *buf, stack_t **stack, unsigned int line_number)

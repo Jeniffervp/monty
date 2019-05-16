@@ -20,7 +20,7 @@ void split(char *buf, stack_t **stack, unsigned int line_number)
 		for (i = 0; temp[i]; i++)
 		{
 			if (_isdigit(temp[i]))
-				batm.data = atoi(temp);
+				batm.data = temp;
 		}
 	}
 	if (name)

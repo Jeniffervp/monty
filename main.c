@@ -2,9 +2,9 @@
 exp batm = {0, NULL, NULL};
 /**
  * main - Entry point
- * @ac: counter
- * @av: arguments
- * Return: avdahsdasvdash
+ * @ac: lenght of arguments pass to monty
+ * @av: arguments used by monty
+ * Return: EXIT SUCCESS if success, EXIT FAILURE if not
  */
 int main(int ac, char *av[])
 {
@@ -23,16 +23,12 @@ int main(int ac, char *av[])
 	if (!batm.fil)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
-		fmonkey(stack);
 		exit(EXIT_FAILURE);
 	}
 	while ((read = getline(&batm.buf, &len, batm.fil)) != EOF)
 	{
-		if (batm.buf[0] != '\0' && batm.buf[0] != '\n')
-		{
-			line_number++;
-			split(batm.buf, &stack, line_number);
-		}
+		line_number++;
+		split(batm.buf, &stack, line_number);
 	}
 	fmonkey(stack);
 	exit(EXIT_SUCCESS);

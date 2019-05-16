@@ -1,5 +1,5 @@
 #include "monty.h"
-exp batm = {0, NULL, NULL};
+exp batm = {NULL, NULL, NULL};
 /**
  * main - Entry point
  * @ac: lenght of arguments pass to monty

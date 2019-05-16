@@ -51,6 +51,8 @@ typedef struct monty_val
 	FILE *fil;
 } exp;
 
+extern exp batm;
+
 void split(char *, stack_t **, unsigned int);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);
@@ -65,7 +67,5 @@ void op_mod(stack_t **stack, unsigned int line_number);
 void op_nop(stack_t **stack, unsigned int line_number);
 void get_opcode(stack_t **, unsigned int, char *);
 void fmonkey(stack_t *stack);
-
-extern exp batm;
 
 #endif /* MONTY_H */

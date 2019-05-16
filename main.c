@@ -28,7 +28,8 @@ int main(int ac, char *av[])
 	}
 	while ((read = getline(&batm.buf, &len, batm.fil)) != EOF)
 	{
-		if (batm.buf[0] != '\0' && batm.buf[0] != '\n')
+		if (batm.buf[0] != '\0' && batm.buf[0] != '\n' &&
+		    batm.buf[0] != ' ' && batm.buf[0] != '\t')
 		{
 			line_number++;
 			split(batm.buf, &stack, line_number);

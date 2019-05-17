@@ -15,11 +15,9 @@ void op_push(stack_t **stack, unsigned int line_number)
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-	{
-		fprintf(stderr, "USAGE: monty file\n");
+	{ fprintf(stderr, "USAGE: monty file\n");
 		fmonkey(new_node);
-		exit(EXIT_FAILURE);
-	}
+		exit(EXIT_FAILURE); }
 	if (batm.data)
 	{
 		for (i = 0; batm.data[i] != '\0'; i++)
@@ -32,16 +30,16 @@ void op_push(stack_t **stack, unsigned int line_number)
 		if (j == 0)
 			num = atoi(batm.data);
 		else
-		{
-			fprintf(stderr, "L%u: usage: push integer\n",
+		{ fprintf(stderr, "L%u: usage: push integer\n",
 				line_number);
-			fmonkey(new_node);
-			exit(EXIT_FAILURE);
-		}
+			fmonkey((*stack));
+			free(new_node);
+			exit(EXIT_FAILURE); }
 	}
 	else
 	{ fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		fmonkey(new_node);
+		fmonkey((*stack));
+		free(new_node);
 		exit(EXIT_FAILURE); }
 	new_node->n = num;
 	new_node->next = *stack;

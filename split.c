@@ -21,6 +21,13 @@ void split(char *buf, stack_t **stack, unsigned int line_number)
 		{
 			if (_isdigit(temp[i]))
 				batm.data = temp;
+			else
+			{
+				fprintf(stderr, "L%u: usage: push integer\n",
+					line_number);
+				fmonkey((*stack));
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
 	if (name)

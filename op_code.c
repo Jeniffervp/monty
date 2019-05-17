@@ -11,6 +11,7 @@
 void op_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t  *new_node, *temp;
+	int i, j, num;
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
@@ -19,13 +20,32 @@ void op_push(stack_t **stack, unsigned int line_number)
 		fmonkey(new_node);
 		exit(EXIT_FAILURE);
 	}
-	if (!batm.data)
+	if (batm.data)
+	{
+		for (i = 0; batm.data[i] != '\0'; i++)
+		{
+			if (batm.data[i] >= 48 && batm.data[i] <= 57)
+				j = 0;
+			else
+				j = 1;
+		}
+		if (j == 0)
+			num = atoi(batm.data);
+		else
+		{
+			fprintf(stderr, "L%u: usage: push integer\n",
+				line_number);
+			fmonkey(new_node);
+			exit(EXIT_FAILURE);
+		}
+	}
+	else
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		fmonkey(new_node);
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = atoi(batm.data);
+	new_node->n = num;
 	new_node->next = *stack;
 	new_node->prev = NULL;
 	temp = *stack;

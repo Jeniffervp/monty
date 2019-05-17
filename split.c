@@ -11,18 +11,11 @@
 void split(char *buf, stack_t **stack, unsigned int line_number)
 {
 	char *name, *temp;
-	int i;
 
 	name = strtok(buf, " \n\t");
 	temp = strtok(NULL, " \n\t");
 	if (temp)
-	{
-		for (i = 0; temp[i]; i++)
-		{
-			if (_isdigit(temp[i]))
-				batm.data = temp;
-		}
-	}
+		batm.data = temp;
 	if (name)
 		get_opcode(stack, line_number, name);
 }

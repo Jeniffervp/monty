@@ -11,7 +11,7 @@
 void op_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t  *new_node, *temp;
-	int i, j, num;
+	int i, j = 1, num;
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)

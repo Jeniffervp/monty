@@ -14,8 +14,7 @@ void split(char *buf, stack_t **stack, unsigned int line_number)
 
 	name = strtok(buf, " \n\t");
 	temp = strtok(NULL, " \n\t");
-	if (temp)
-		batm.data = temp;
+	batm.data = temp;
 	if (name)
 		get_opcode(stack, line_number, name);
 }
